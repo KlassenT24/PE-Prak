@@ -3,7 +3,7 @@ import os
 from queue.base_queue import BaseQueue
 from queue.red_queue import REDQueue
 from experiments.run_experiments import run_experiment
-from analysis.evaluate_results import evaluate_results
+from analysis.evaluate_results import analyze_results
 
 RESULTS_DIR = './results/summary'
 os.makedirs(RESULTS_DIR, exist_ok=True)
@@ -25,8 +25,8 @@ def main():
         json.dump(red_results, f, indent=2)
 
     # Evaluate results
-    evaluate_results(standard_results, 'Standard Queue')
-    evaluate_results(red_results, 'RED Queue')
+    analyze_results(standard_results)
+    analyze_results(red_results)
 
 if __name__ == "__main__":
     main()
