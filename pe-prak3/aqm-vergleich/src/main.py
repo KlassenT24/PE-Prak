@@ -2,7 +2,7 @@ import json
 import os
 from queue.base_queue import BaseQueue
 from queue.red_queue import REDQueue
-from experiments.run_experiments import run_experiments
+from experiments.run_experiments import run_experiment
 from analysis.evaluate_results import evaluate_results
 
 RESULTS_DIR = './results/summary'
